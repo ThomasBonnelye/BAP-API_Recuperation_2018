@@ -1,14 +1,40 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      New Feed
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-row>
+      <ion-col>
+          <div *ngFor="let item of data">
+              <ion-card>
+
+                  <ion-item>
+                      <ion-avatar item-start>
+                          <img src="{{item.picture.thumbnail}}">
+                      </ion-avatar>
+                      <h2>{{item.name.first}} {{item.name.last}}</h2>
+                      <p>Age {{item.dob.age}}</p>
+                  </ion-item>
+
+                  <ion-card-content>
+                      <p>{{item.ref}}</p>
+                  </ion-card-content>
+
+                  <ion-row>
+                      <ion-col>
+                          <button ion-button icon-start clear small>
+                              <ion-icon name="ios-heart"></ion-icon>
+                              <div>{{item.note}}</div>
+                          </button>
+                      </ion-col>
+                  </ion-row>
+
+              </ion-card>
+          </div>
+      </ion-col>
+  </ion-row>
 </ion-content>
