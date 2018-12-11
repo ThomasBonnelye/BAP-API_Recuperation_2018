@@ -14,21 +14,20 @@
 
                   <ion-item>
                       <ion-avatar item-start>
-                          <img src="{{item.picture.thumbnail}}">
+                          <img src="{{item.img}}">
                       </ion-avatar>
-                      <h2>{{item.name.first}} {{item.name.last}}</h2>
-                      <p>Age {{item.dob.age}}</p>
+                      <h2>{{item.title}} de {{item.seller_id.name}}</h2>
+                      <p>{{item.ref}}</p>
                   </ion-item>
 
                   <ion-card-content>
-                      <p>{{item.ref}}</p>
+                      <p>{{item.desc}}</p>
                   </ion-card-content>
 
                   <ion-row>
                       <ion-col>
                           <button ion-button icon-start clear small>
-                              <ion-icon name="ios-heart"></ion-icon>
-                              <div>{{item.note}}</div>
+                              <div>{{item.price}} €</div>
                           </button>
                       </ion-col>
                   </ion-row>

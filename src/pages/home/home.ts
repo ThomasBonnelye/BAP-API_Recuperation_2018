@@ -22,11 +22,11 @@ export class HomePage {
 
   loadData(){
 
-      this.http.get('https://randomuser.me/api/?results=50')
+      this.http.get('https://nicolas.okbutwin.fr/myplanner/api/?products=all')
           .map(res => res.json())
           .subscribe(data => {
-              this.data = data.results;
-              console.log(data.results);
+              this.data = data;
+              console.log(data);
           },err => {console.log(err);
 
           });
