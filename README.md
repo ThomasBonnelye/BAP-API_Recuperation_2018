@@ -2,7 +2,7 @@
 
 ## Description
 
-Creating a blog using Laravel. 
+Recovery of API data. 
 
 ## Used 
 #### Framework
